@@ -1,0 +1,19 @@
+## YAML Template.
+---
+server:
+    port: 8081
+spring:
+    application:
+        name: config-registry
+---
+spring:
+    cloud:
+        config:
+            server:
+                git:
+                    uri: file:///${user.home}/application-config
+---
+security:
+    user: 
+        name: root
+        password: admin
